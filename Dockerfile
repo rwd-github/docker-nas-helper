@@ -2,7 +2,7 @@ FROM ubuntu:latest
 MAINTAINER RWd <rwd-github@gmx.net>
 
 RUN apt update \
-	&& apt install -y duperemove btrfs-progs \
+	&& apt install -y duperemove btrfs-progs rsync \
 	&& apt-get clean
 	
 
