@@ -1,9 +1,9 @@
 FROM ubuntu:latest
 MAINTAINER RWd <rwd-github@gmx.net>
 
-#RUN apt update \
-#	&& apt upgrade -y \
-#	&& apt install -y locales
+RUN apt update \
+	&& apt upgrade -y \
+	&& apt install -y locales
 
 #RUN echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen \
 #	&& locale-gen de_DE.UTF-8 \
