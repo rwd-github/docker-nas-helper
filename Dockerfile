@@ -9,7 +9,13 @@ MAINTAINER RWd <rwd-github@gmx.net>
 #	&& locale-gen de_DE.UTF-8 \
 #	&& update-locale LANG=de_DE.UTF-8 LC_MESSAGES=POSIX
 
+#ENV LANG de_DE.UTF-8
+
+# Set the locale
+RUN locale-gen de_DE.UTF-8
 ENV LANG de_DE.UTF-8
+ENV LANGUAGE de_DE:de
+ENV LC_ALL de_DE.UTF-8
 
 RUN apt update \
 	&& apt upgrade -y \
