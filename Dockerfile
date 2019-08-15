@@ -1,18 +1,11 @@
 FROM ubuntu:latest
 MAINTAINER RWd <rwd-github@gmx.net>
 
+# Set the locale
 RUN apt update \
 	&& apt upgrade -y \
-	&& apt install -y locales
-
-#RUN echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen \
-#	&& locale-gen de_DE.UTF-8 \
-#	&& update-locale LANG=de_DE.UTF-8 LC_MESSAGES=POSIX
-
-#ENV LANG de_DE.UTF-8
-
-# Set the locale
-RUN locale-gen de_DE.UTF-8
+	&& apt install -y locales \
+	&& locale-gen de_DE.UTF-8
 ENV LANG de_DE.UTF-8
 ENV LANGUAGE de_DE:de
 ENV LC_ALL de_DE.UTF-8
