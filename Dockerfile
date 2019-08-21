@@ -12,8 +12,9 @@ ENV LC_ALL de_DE.UTF-8
 
 RUN apt update \
 	&& apt upgrade -y \
-	&& apt install -y duperemove btrfs-progs rsync openssh-client \
+	&& apt install -y duperemove btrfs-progs rsync openssh-client ssmtp \
 	&& apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 	
+
 
