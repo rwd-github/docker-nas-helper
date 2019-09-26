@@ -10,13 +10,6 @@ ENV LANG de_DE.UTF-8
 ENV LANGUAGE de_DE:de
 ENV LC_ALL de_DE.UTF-8
 
-RUN apt update \
-	&& apt upgrade -y \
-	&& apt install -y duperemove btrfs-progs rsync openssh-client ssmtp mpack tmux mc \
-	&& chfn -f "NAS" root \
-	&& apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-	
 ENV TZ 'Europe/Berlin'
 RUN echo $TZ > /etc/timezone \
     && apt-get update && apt-get install -y tzdata \
@@ -25,3 +18,11 @@ RUN echo $TZ > /etc/timezone \
     && dpkg-reconfigure -f noninteractive tzdata \
 	&& apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN apt update \
+	&& apt upgrade -y \
+	&& apt install -y duperemove btrfs-progs rsync openssh-client ssmtp mpack tmux mc \
+	&& chfn -f "NAS" root \
+	&& apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+	
