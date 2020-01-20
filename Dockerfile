@@ -21,7 +21,7 @@ RUN echo $TZ > /etc/timezone                                        && \
 
 RUN apt update \
 	&& apt upgrade -y \
-	&& apt install -y duperemove btrfs-progs rsync openssh-client ssmtp mpack tmux mc \
+	&& apt install -y duperemove btrfs-progs rsync openssh-client ssmtp mpack tmux mc less \
 	&& chfn -f "NAS" root \
 	&& apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
