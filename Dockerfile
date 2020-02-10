@@ -1,5 +1,4 @@
 FROM ubuntu:latest
-MAINTAINER RWd <rwd-github@gmx.net>
 
 # Set the locale
 RUN apt update \
